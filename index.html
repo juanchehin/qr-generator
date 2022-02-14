@@ -37,7 +37,7 @@
             vertical-align: middle;
         }
         
-        :root {
+         :root {
             --htmlFontSize: 100%;
             --bodyBackgroundColor: #2c3338;
             --bodyColor: var(--baseColor);
@@ -70,7 +70,7 @@
             place-items: center;
         }
         
-        :root {
+         :root {
             --anchorColor: #eee;
         }
         
@@ -85,7 +85,7 @@
             text-decoration: underline;
         }
         
-        :root {
+         :root {
             --formGap: 0.875rem;
         }
         
@@ -134,7 +134,7 @@
             inline-size: 100%;
         }
         
-        :root {
+         :root {
             --loginBorderRadus: 0.25rem;
             --loginColor: #eee;
             --loginInputBackgroundColor: #3b4148;
@@ -194,6 +194,26 @@
 </head>
 
 <body>
+    <div class="grid">
+        <h2 align="center">QR Code Generator</h2>
+        <center>
+            <img src="" id="img"></center>
+
+        <select id="size">
+            <option value="100">100x100</option>
+            <option value="150">150x150</option>
+            <option value="200">200x200</option>
+            <option value="250" selected>250x250</option>
+            <option value="300">300x300</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
+        <br><br>
+        <input type="submit" value="Generate" onclick="genQR()">
+
+        <p>Developed By Juan Chehin</p>
+    </div>
+
     <script type="text/javascript">
         function genQR() {
             var gapi = "https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
@@ -219,26 +239,6 @@
 
         }
     </script>
-
-    <div class="grid">
-        <h2 align="center">QR Code Generator</h2>
-        <center>
-            <img src="" id="img"></center>
-
-        <select id="size">
-            <option value="100">100x100</option>
-            <option value="150">150x150</option>
-            <option value="200">200x200</option>
-            <option value="250" selected>250x250</option>
-            <option value="300">300x300</option>
-        </select>
-        <br><br>
-        <textarea placeholder="Enter Your Text" id="qrtext"></textarea>
-        <br><br>
-        <input type="submit" value="Generate" onclick="genQR()">
-
-        <p>Developed By Juan Chehin</p>
-    </div>
 </body>
 
 </html>
